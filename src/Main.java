@@ -2,14 +2,48 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        Author Tolstoy = new Author("Lev", "Tolstoy");
+        Author Gogol = new Author("Nikolay", "Gogol");
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        Book WarAndPeace = new Book("Война и мир", Tolstoy, 1867);
+        Book TarasBulba = new Book("Тарас Бульба", Gogol, 1852);
+
+        System.out.println("Tolstoy.name = " + Tolstoy.getName());
+        System.out.println("Tolstoy.firstName = " + Tolstoy.getFirstName());
+        System.out.println("WarAndPeace.name = " + WarAndPeace.getTitle());
+        System.out.println("WarAndPeace.year = "  + WarAndPeace.getYear());
+        System.out.println("Gogol.name = " + Gogol.getName());
+        System.out.println("Gogol.firstName = " + Gogol.getFirstName());
+        System.out.println("TarasBulba.name = " + TarasBulba.getTitle());
+        System.out.println("TarasBulba.year = " + TarasBulba.getYear());
+        TarasBulba.setYear(1853);
+        System.out.println("TarasBulba.newYear = " + TarasBulba.getYear());
+        System.out.println(new Book("Война и мир", "Tolstoy", 1867));
+        System.out.println(new Author("Tolstoy", "Lev"));
+
+        Book c = new Book("Война и мир", new Author("Tolstoy"), 1867);
+        Book c2 = new Book("Война и мир", new Author("Tolstoy"), 1867);
+
+        System.out.println(c.equals(c2));
+
+
+
+
+
+
+
+
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
