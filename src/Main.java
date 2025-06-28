@@ -18,6 +18,20 @@ public class Main {
         System.out.println("TarasBulba.year = " + TarasBulba.getYear());
         TarasBulba.setYear(1853);
         System.out.println("TarasBulba.newYear = " + TarasBulba.getYear());
+        System.out.println(new Book("Война и мир", "Tolstoy", 1867));
+        System.out.println(new Author("Tolstoy", "Lev"));
+
+        Book c = new Book("Война и мир", new Author("Tolstoy"), 1867);
+        Book c2 = new Book("Война и мир", new Author("Tolstoy"), 1867);
+
+        System.out.println(c.equals(c2));
+
+
+
+
+
+
+
 
     }
 }
